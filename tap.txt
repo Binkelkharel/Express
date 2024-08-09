@@ -1,0 +1,63 @@
+c = create  => post
+r = read  => get
+u = update  => patch
+d = delete  => delete
+
+
+frontend request backend
+    how to request
+        url:  localhost:8000
+        method:post|get|patch|delete
+
+making API means
+    define response for particular request 
+
+To make api
+    we have to follow two steps
+        make Router
+        use that router to index.js(main app)
+
+
+for one request we must have only one response
+
+
+url = localhost:8000/a/b/c?name=nitan&age=30&isMarried=false
+url = route?query
+route=baseUrl/routeParam1/routeParam2/....
+query =name=nitan&age=30&isMarried=false
+
+every things in url are string
+
+How can you send data from postman or browser
+    3way
+        body
+        params
+        query
+
+database
+    connect backend to mongoose database
+    mongoose
+
+middleware
+	based on parameter
+		normal
+			(req,res,next)=>{}
+		error
+			(err,req,res,next)=>{}
+
+
+error   
+    cannot find package mongoose(it means do npm i mongoose)
+
+    mongoose is not defined ( it means import mongoose)
+
+    cannot find module (it means add .js)
+
+    cast to objectId failed(it means is is not valid)
+
+crud
+    .create(req.body)
+    .find({})
+    .findById(req.params.id)
+    .findByIdAndUpdate(req.params.id,req.body, {new:true})
+    .findByIdAndDelete(req.params.id)
